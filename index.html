@@ -309,7 +309,7 @@ h1 {
   width: auto;
   height: 100vh;
   position: sticky;
-  background-image: url('https://i.ibb.co/CsLDdxN/main.png');
+  background-image: url('https://i.ibb.co/0ht9mSy/noir-black-and-white-dark-lamp-light-4k-hd-nature.jpg');
   background-size: cover;
   background-position: center center;
 }
@@ -504,7 +504,7 @@ a {
 
 :root {
   --shadow-color: #ffffff;
-  --shadow-color-light: rgb(111, 111, 111);
+  --shadow-color-light: rgb(187, 187, 187);
 }
 /* ====================================
 Glitch 
@@ -1138,7 +1138,6 @@ Animation keyframes
     width: auto;
     height: 100vh;
     position: sticky;
-    background-image: url('https://i.ibb.co/CsLDdxN/main.png');
     background-size: cover;
     background-position: center center;
   }
@@ -1152,13 +1151,25 @@ Animation keyframes
     font-size: 12px; /* Adjusted font-size for small screens */
     width: 100%; /* Full width */
     text-align: center; /* Centers the content horizontally */
-    top: 50%; /* Vertically centers it */
+    bottom: 20%; /* Vertically centers it */
     left: 50%; /* Horizontally centers it */
     transform: translate(-50%, -50%); /* Adjusts the exact center position */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .definecontain:hover {
+    transform: none;
   }
 
   .definecontain.expanded {
     font-size: 12px; /* Slightly larger font-size for expanded on small screens */
+  }
+
+  .definecontain.expanded:hover {
+    transform: none;
   }
 }
 
@@ -1182,8 +1193,16 @@ Animation keyframes
     transform: translate(-50%, -50%); /* Adjusts the exact center position */
   }
 
+  .definecontain:hover {
+    transform: none;
+  }
+
   .definecontain.expanded {
     font-size: 14px; /* Slightly larger font-size for expanded on small screens */
+  }
+
+  .definecontain.expanded:hover {
+    transform: none;
   }
 }
 
@@ -1207,8 +1226,17 @@ Animation keyframes
     transform: translate(-50%, -50%); /* Adjusts the exact center position */
   }
 
+  .definecontain:hover {
+    transform: none;
+  }
+
   .definecontain.expanded {
     font-size: 14px; /* Increased font size for expanded state */
+    color: #ff0000;
+  }
+
+  .definecontain.expanded:hover {
+    transform: none;
   }
 }
 
