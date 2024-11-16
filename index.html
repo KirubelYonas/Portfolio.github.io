@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chokokutai&family=Doto:wght@100..900&family=Major+Mono+Display&family=Monoton&family=Rubik+80s+Fade&family=Syne+Mono&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+   
+  <section class="home"> 
+    
+    <div class="hero-container">
+      <h1 class="heading hero glitch layers" data-text="基鲁贝尔·约纳斯">Kirubel Yonas</h1>
+    </div>
+    <div class="field">
+      <h2 class="software">Full-Stack Developer</h2>
+    </div>
+    <a href="https://github.com/KirubelYonas" class ="link1" target="_blank">More about my skills and tools I use</a>
+    
+    <div class="definecontain me define" id="define">
+      Hello, I'm Kirubel! A versatile developer into projects ranging from operating system clones through to game development. Currently, I'm getting into C# for data structures and algorithms, but I have a good history with languages such as C++ and PHP.
+      Please don't hesitate to reach out through my <a href="https://www.linkedin.com/in/KirubelYonas/" class="linkedin">LinkedIn</a> or connect on <a href="https://discord.com/users/1145355875654058125" class="discord">Discord@kirubelyonas</a>
+    </div>
+
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+  </section>
+
+  <!-- Add jQuery here -->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    const cursorDot = document.querySelector("[data-cursor-dot]");
+const cursorOut = document.querySelector("[data-cursor-outline]");
+
+let timeout; // Define timeout at the correct scope
+
+window.addEventListener("mousemove", function (e) {
+  let posX = e.clientX; //fetch the client cursor vertical position
+  let posY = e.clientY; // fetch the client cursor horizontal position
+
+  // Move the cursor dot and outline
+  cursorDot.style.left = posX + "px";
+  cursorDot.style.top = posY + "px";
+
+  cursorOut.style.left = posX + "px";
+  cursorOut.style.top = posY + "px";
+
+  // Ensure both cursors are visible
+  cursorDot.style.display = "block";
+  cursorOut.style.display = "block";
+
+  // Clear any previous timeout to prevent immediate hiding
+  clearTimeout(timeout);
+
+  // Start a new timeout to hide the cursor after 1 second of inactivity
+  timeout = setTimeout(() => {
+    cursorDot.style.display = "none";
+    cursorOut.style.display = "none";
+  }, 1000); //in milliseconds
+});
+
+// Hide the cursor when the mouse leaves the window
+document.addEventListener("mouseout", () => {
+  cursorOut.style.display = "none";
+  cursorDot.style.display = "none";
+});
+
+  </script>
+
+  <script>
+    // Select the element
+const defineContain = document.querySelector('#define');  // Select by ID 'define'
+
+// Define the initial and expanded text
+const initialText = `<p class="first">Hello, I'm Kirubel! A versatile developer into projects ranging from operating system clones through to game development. Currently, I'm getting into C# for data structures and algorithms, but I have a good history with languages such as C++ and PHP. Please don't hesitate to reach out through my
+  Please don't hesitate to reach out through my <a href="https://www.linkedin.com/in/KirubelYonas/" class="linkedin">LinkedIn</a> or connect on <a href="https://discord.com/users/1145355875654058125" class="discord">Discord@kirubelyonas</a>
+  </p>`;
+
+const expandedText = `
+  <p class="needhelp">Stuck? just click here</p>
+
+  <p class="paragrapgh first">Hello, I'm Kirubel! I am a technology enthusiast, developer, and a 17-year-old problem solver with an interest in digging into the <br> limitless things possible with technology. Currently in Addis Ababa, I attend Indian International School, from which I will graduate in <br> 2026. Most of my free time is dedicated toward learning more about programming, testing new stuff, or working on personal projects <br> in complement to this.</p>
+
+<p class="paragrapgh second">Currently, I work on an OS Cloned System, which challenges me to know much more about low-level programming and system functionalities. I'm <br> also studying C# Data Structures and Algorithms for good grounding that would go a long way toward any software and/or game development <br> that I may want to do. Learning data structures has been fascinating, as it exposes you to how programs think from simple to <br> complex systems.</p>
+
+<p class="paragrapgh third">My technical skill set is eclectic, involving front-end and back-end web development, mobile app development, game design, and embedded <br> systems. I know such programming languages as C++, PHP, Kotlin, and some frameworks and tools: React, .NET, Docker, Firebase. I also like <br> working with Arduino and exploring the world of IoT, which means combining hardware and software to create interactive projects.</p>
+
+<p class="paragrapgh forth">Beyond coding, I am absolutely sure that learning never stops. This is because, for some time now, I have been able to extend the knowledge <br> in me through online platforms like SoloLearn and freeCodeCamp. Both have given me a very firm foundation in the basics of programming, in <br>web development, and even other more advanced things. I also look forward to working with other developers anytime, always <br> up for any new projects involving game development, Arduino, or complex data structures.</p>
+
+<p class="paragrapgh fifth">Otherwise, when I'm not working on projects, you'll find me studying the guts of Regex—it is fun for some of us!—bashing out code challenges, <br> or playing around with new algorithms. Generally speaking, I enjoy a good challenge and don not mind getting down in the deep, nitty-gritty details <br> of code for the sake of problem-solving or building.</p>
+
+<p class="paragrapgh sixth">If you are interested in collaborating, discussing projects, or just sharing knowledge, feel free to connect with me. Let us <br> build something amazing together!</p>
+
+`;
+
+
+// Add event listener for the 'click' event
+defineContain.addEventListener('click', function() {
+    // Toggle the 'expanded' class on click
+    defineContain.classList.toggle('expanded');
+
+    // Change the text based on whether the div is expanded or not
+    if (defineContain.classList.contains('expanded')) {
+        defineContain.innerHTML = expandedText;
+    } else {
+        defineContain.innerHTML = initialText;
+    }
+});
+
+  </script>
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Doto:wght@100..900&family=Major+Mono+Display&family=Monoton&family=Rubik+80s+Fade&family=Syne+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global scrollbar styles for webkit-based browsers */
+::-webkit-scrollbar {
+  width: 12px;  /* Vertical scrollbar width */
+  height: 12px; /* Horizontal scrollbar height */
+}
+
+::-webkit-scrollbar-track {
+  background: #000; /* Dark track color (black) */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333; /* Darker thumb color */
+  border-radius: 10px; /* Rounded corners for thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Slightly lighter thumb on hover */
+}
+
+::-webkit-scrollbar-corner {
+  background: #000; /* Bottom corner where the scrollbars meet */
+}
+
+/* Firefox */
+scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+scrollbar-track {
+  background: #333;
+  border-radius: 10px;
+}
+
+scrollbar-thumb {
+  background: #262d31;
+  border-radius: 10px;
+}
+
+scrollbar-thumb:hover {
+  background: #27292a;
+}
+
+/* Applying the styles to the .definecontain element specifically */
+.definecontain::-webkit-scrollbar {
+  width: 12px;
+}
+
+.definecontain::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+
+.definecontain::-webkit-scrollbar-thumb {
+  background: #434b4e;
+}
+
+.definecontain::-webkit-scrollbar-thumb:hover {
+  background: #2c3032;
+}
+
+/* Optional - Firefox specific styles (use scrollbar-width and scrollbar-color) */
+.definecontain {
+  scrollbar-width: thin; /* Firefox specific */
+  scrollbar-color: #080808 #2e2e2e; /* Thumb and track colors */
+}
+
+/* Add smooth transition for the scrollbar */
+::-webkit-scrollbar-thumb {
+  transition: background 0.3s ease-in-out; /* Smooth transition for thumb */
+}
+
+.cursor-dot {
+  width: 15px;
+  height: 15px;
+
+  
+  color: transparent;
+  display: none;
+}
+.cursor-outline {
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgba(195, 195, 195, 0.743);
+  display: none;
+}
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 200;
+  pointer-events: none;
+}
+
+body {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  color: #ccc;
+  overflow: hidden;
+  cursor: none;
+}
+
+.doto-regular {
+  font-family: "Doto", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 0;
+}
+
+.chokokutai-regular {
+  font-family: "Chokokutai", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.rubik-80s-fade-regular {
+  font-family: "Rubik 80s Fade", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.syne-mono-regular {
+  font-family: "Syne Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.major-mono-display-regular {
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.monoton-regular {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero-container {
+  padding-left: 15%;
+  padding-top: 150px;
+  width: fit-content;
+}
+
+h1 {
+  font-family: Doto, sans-serif;
+  width: auto;
+  height: auto;
+  position: absolute;
+  white-space: nowrap;
+  animation: animated-text 4s steps(29,end) 1s 1 normal both;
+    animation: paths 5s step-end infinite;
+
+}
+
+.home {
+  width: auto;
+  height: 100vh;
+  position: sticky;
+  background-image: url('https://i.ibb.co/CsLDdxN/main.png');
+  background-size: cover;
+  background-position: center center;
+}
+
+.field {
+  padding-left: 15%;
+  padding-top: 20px;
+}
+
+.software {
+  color: #000000;
+  font-family: "Rubik 80s Fade", sans-serif;
+  font-size: xx-large;
+  animation: fade-in 3s ease-in,
+             neon 6s ease-in-out infinite ;
+}
+
+
+  /* Your original CSS */
+  .definecontain {
+    position: fixed;
+    right: 5rem;
+    top: 20.2rem;
+    z-index: 100;
+    width: 40%;
+    overflow: hidden;
+    background: #272729;
+    border: 0.5px solid #3a3838;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
+    font-size: 1.25rem;
+    height: fit-content;
+    margin-block: 1rem;
+    margin-inline: auto;
+    padding-block: 0.5rem;
+    padding-inline: 1.5rem;
+    transition: all 0.5s ease; /* Adds smooth transition */
+    cursor: none; /* Make it clear that it's clickable */
+  }
+
+  .definecontain:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+  }
+
+  .definecontain.expanded {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-size: 1.25rem;
+    font-family: "Monoton", sans-serif;
+    border-radius: 0;
+    box-shadow: none;
+    background-size: 200px; /* Adjust to cover the container */
+    background-image: url('https://i.ibb.co/Wz3yg35/8054303.jpg'),
+                      url('https://i.ibb.co/7zPyRDk/8054273.jpg');
+  }
+  
+  /* Define the scrolling animation */
+  @keyframes scrollBackground {
+    0% {
+      background-position: 0 0, 0 0, 0 0;
+    }
+    100% {
+      background-position: -200% 0, -300% 0, -400% 0; /* Scroll backgrounds at different speeds */
+    }
+  }
+  
+  .definecontain.expanded:hover {
+    transform: none;
+  }
+/* Basic styles for each paragraph in the expanded state */
+.paragrapgh {
+  white-space: normal; /* Allow wrapping of text */
+  word-wrap: break-word; /* Ensure long words break properly */
+  line-height: 1.6; /* Increase line height for readability */
+  margin: 0.5rem 0; /* Add vertical spacing between paragraphs */
+  padding: 0.5rem; /* Add padding around each paragraph */
+  box-sizing: border-box; /* Ensure padding is included in the width/height calculations */
+}
+
+/* Specifically for the expanded state */
+.definecontain.expanded .paragrapgh {
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  max-height: 85vh; /* Limit the max height to 85% of the viewport height */
+  padding-right: 1rem; /* Add some padding for aesthetics */
+  text-align: justify; /* Justify text for better alignment */
+  animation: float 20s ease-in infinite;
+}
+
+ 
+
+/* Optional: You can also set specific styles for each paragraph if you want to target them individually */
+.definecontain.expanded .paragrapgh.first {
+  font-size: 1.2rem; /* Slightly larger text for the first paragraph */
+  color: #ffffff;
+}
+
+.definecontain.expanded .paragrapgh.second {
+  font-size: 1rem; /* Slightly smaller font size for middle paragraphs */
+  color: rgb(165, 72, 72);
+}
+.definecontain.expanded .paragrapgh.third {
+  font-size: 1rem; /* Slightly smaller font size for middle paragraphs */
+  color: darkkhaki;
+  
+}
+
+.definecontain.expanded .paragrapgh.forth{
+  font-size: 1rem; /* Even smaller font size for further paragraphs */
+  color: indigo;
+}
+.definecontain.expanded .paragrapgh.fifth {
+  font-size: 1rem; /* Even smaller font size for further paragraphs */
+  color: teal;
+}
+
+.definecontain.expanded .paragrapgh.sixth {
+  font-size: 1rem; /* Larger font for the final paragraph */
+  color: olivedrab;
+}
+
+.needhelp {
+  position: sticky;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  right: 100px;
+  top: 0;
+  padding-right: 50px;
+  font-size: xx-small;
+  text-decoration: underline;
+}
+
+.me {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .me {
+    -webkit-animation: fade-in 1.5s ease-out;
+            animation: fade-in 1.5s ease-out;
+    animation-composition: replace;
+  }
+  .definecontain {
+      -webkit-animation: fade-in 1.5s ease-out;
+              animation: fade-in 1.5s ease-out;
+      animation-composition: replace;
+  }
+}
+
+.define {
+  color: #b8b2b2;
+  font-family: "Syne Mono", monospace;
+}
+
+a {
+  font-family: "Syne Mono", sans-serif;
+  text-decoration: underline;}
+
+.linkedin {
+  color: #4d34da;
+  font-family: "Syne Mono", sans-serif;
+  text-decoration: underline;
+}
+
+.discord {
+  color: #3f3f8b;
+  font-family: "Syne Mono", sans-serif;
+  text-decoration: underline;
+}
+
+
+
+:root {
+  --shadow-color: #ffffff;
+  --shadow-color-light: rgb(111, 111, 111);
+}
+/* ====================================
+Glitch 
+==================================== */
+.hero {
+  font-size: clamp(20px, 5vw, 50px);
+  line-height: 1;
+  display: inline-block;
+  color: #fff;
+  z-index: 2;
+  /* Bright things in dark environments usually cast that light, giving off a glow */
+  filter: drop-shadow(0 1px 3px);
+}
+
+
+
+.layers {
+  position: relative;
+}
+
+.layers::before,
+.layers::after {
+  content: attr(data-text);
+  position: absolute;
+  width: 110%;
+  z-index: -1;
+}
+
+.layers::before {
+  top: 10px;
+  left: 15px;
+  color: #580d0d;
+}
+
+.layers::after {
+  top: 10px;
+  left: -15px;
+  color: #11173f;
+}
+
+.single-path {
+  clip-path: polygon(
+    0% 12%,
+    53% 12%,
+    53% 26%,
+    25% 26%,
+    25% 86%,
+    31% 86%,
+    31% 0%,
+    53% 0%,
+    53% 84%,
+    92% 84%,
+    92% 82%,
+    70% 82%,
+    70% 29%,
+    78% 29%,
+    78% 65%,
+    69% 65%,
+    69% 66%,
+    77% 66%,
+    77% 45%,
+    85% 45%,
+    85% 26%,
+    97% 26%,
+    97% 28%,
+    84% 28%,
+    84% 34%,
+    54% 34%,
+    54% 89%,
+    30% 89%,
+    30% 58%,
+    83% 58%,
+    83% 5%,
+    68% 5%,
+    68% 36%,
+    62% 36%,
+    62% 1%,
+    12% 1%,
+    12% 34%,
+    60% 34%,
+    60% 57%,
+    98% 57%,
+    98% 83%,
+    1% 83%,
+    1% 53%,
+    91% 53%,
+    91% 84%,
+    8% 84%,
+    8% 83%,
+    4% 83%
+  );
+}
+
+.paths {
+  animation: paths 5s step-end infinite;
+}
+
+@keyframes paths {
+  0% {
+    clip-path: polygon(
+      0% 43%,
+      83% 43%,
+      83% 22%,
+      23% 22%,
+      23% 24%,
+      91% 24%,
+      91% 26%,
+      18% 26%,
+      18% 83%,
+      29% 83%,
+      29% 17%,
+      41% 17%,
+      41% 39%,
+      18% 39%,
+      18% 82%,
+      54% 82%,
+      54% 88%,
+      19% 88%,
+      19% 4%,
+      39% 4%,
+      39% 14%,
+      76% 14%,
+      76% 52%,
+      23% 52%,
+      23% 35%,
+      19% 35%,
+      19% 8%,
+      36% 8%,
+      36% 31%,
+      73% 31%,
+      73% 16%,
+      1% 16%,
+      1% 56%,
+      50% 56%,
+      50% 8%
+    );
+  }
+
+  5% {
+    clip-path: polygon(
+      0% 29%,
+      44% 29%,
+      44% 83%,
+      94% 83%,
+      94% 56%,
+      11% 56%,
+      11% 64%,
+      94% 64%,
+      94% 70%,
+      88% 70%,
+      88% 32%,
+      18% 32%,
+      18% 96%,
+      10% 96%,
+      10% 62%,
+      9% 62%,
+      9% 84%,
+      68% 84%,
+      68% 50%,
+      52% 50%,
+      52% 55%,
+      35% 55%,
+      35% 87%,
+      25% 87%,
+      25% 39%,
+      15% 39%,
+      15% 88%,
+      52% 88%
+    );
+  }
+
+  30% {
+    clip-path: polygon(
+      0% 53%,
+      93% 53%,
+      93% 62%,
+      68% 62%,
+      68% 37%,
+      97% 37%,
+      97% 89%,
+      13% 89%,
+      13% 45%,
+      51% 45%,
+      51% 88%,
+      17% 88%,
+      17% 54%,
+      81% 54%,
+      81% 75%,
+      79% 75%,
+      79% 76%,
+      38% 76%,
+      38% 28%,
+      61% 28%,
+      61% 12%,
+      55% 12%,
+      55% 62%,
+      68% 62%,
+      68% 51%,
+      0% 51%,
+      0% 92%,
+      63% 92%,
+      63% 4%,
+      65% 4%
+    );
+  }
+
+  45% {
+    clip-path: polygon(
+      0% 33%,
+      2% 33%,
+      2% 69%,
+      58% 69%,
+      58% 94%,
+      55% 94%,
+      55% 25%,
+      33% 25%,
+      33% 85%,
+      16% 85%,
+      16% 19%,
+      5% 19%,
+      5% 20%,
+      79% 20%,
+      79% 96%,
+      93% 96%,
+      93% 50%,
+      5% 50%,
+      5% 74%,
+      55% 74%,
+      55% 57%,
+      96% 57%,
+      96% 59%,
+      87% 59%,
+      87% 65%,
+      82% 65%,
+      82% 39%,
+      63% 39%,
+      63% 92%,
+      4% 92%,
+      4% 36%,
+      24% 36%,
+      24% 70%,
+      1% 70%,
+      1% 43%,
+      15% 43%,
+      15% 28%,
+      23% 28%,
+      23% 71%,
+      90% 71%,
+      90% 86%,
+      97% 86%,
+      97% 1%,
+      60% 1%,
+      60% 67%,
+      71% 67%,
+      71% 91%,
+      17% 91%,
+      17% 14%,
+      39% 14%,
+      39% 30%,
+      58% 30%,
+      58% 11%,
+      52% 11%,
+      52% 83%,
+      68% 83%
+    );
+  }
+
+  76% {
+    clip-path: polygon(
+      0% 26%,
+      15% 26%,
+      15% 73%,
+      72% 73%,
+      72% 70%,
+      77% 70%,
+      77% 75%,
+      8% 75%,
+      8% 42%,
+      4% 42%,
+      4% 61%,
+      17% 61%,
+      17% 12%,
+      26% 12%,
+      26% 63%,
+      73% 63%,
+      73% 43%,
+      90% 43%,
+      90% 67%,
+      50% 67%,
+      50% 41%,
+      42% 41%,
+      42% 46%,
+      50% 46%,
+      50% 84%,
+      96% 84%,
+      96% 78%,
+      49% 78%,
+      49% 25%,
+      63% 25%,
+      63% 14%
+    );
+  }
+
+  90% {
+    clip-path: polygon(
+      0% 41%,
+      13% 41%,
+      13% 6%,
+      87% 6%,
+      87% 93%,
+      10% 93%,
+      10% 13%,
+      89% 13%,
+      89% 6%,
+      3% 6%,
+      3% 8%,
+      16% 8%,
+      16% 79%,
+      0% 79%,
+      0% 99%,
+      92% 99%,
+      92% 90%,
+      5% 90%,
+      5% 60%,
+      0% 60%,
+      0% 48%,
+      89% 48%,
+      89% 13%,
+      80% 13%,
+      80% 43%,
+      95% 43%,
+      95% 19%,
+      80% 19%,
+      80% 85%,
+      38% 85%,
+      38% 62%
+    );
+  }
+
+  1%,
+  7%,
+  33%,
+  47%,
+  78%,
+  93% {
+    clip-path: none;
+  }
+}
+
+
+
+@keyframes movement {
+  0% {
+    top: 0px;
+    left: -20px;
+  }
+
+  15% {
+    top: 10px;
+    left: 10px;
+  }
+
+  60% {
+    top: 5px;
+    left: -10px;
+  }
+
+  75% {
+    top: -5px;
+    left: 20px;
+  }
+
+  100% {
+    top: 10px;
+    left: 5px;
+  }
+}
+
+
+
+@keyframes opacity {
+  0% {
+    opacity: 0.1;
+  }
+
+  5% {
+    opacity: 0.7;
+  }
+
+  30% {
+    opacity: 0.4;
+  }
+
+  45% {
+    opacity: 0.6;
+  }
+
+  76% {
+    opacity: 0.4;
+  }
+
+  90% {
+    opacity: 0.8;
+  }
+
+  1%,
+  7%,
+  33%,
+  47%,
+  78%,
+  93% {
+    opacity: 0;
+  }
+}
+
+@keyframes font {
+  0% {
+    font-weight: 100;
+    color: #e0287d;
+    filter: blur(3px);
+  }
+
+  20% {
+    font-weight: 500;
+    color: #fff;
+    filter: blur(0);
+  }
+
+  50% {
+    font-weight: 300;
+    color: #1bc7fb;
+    filter: blur(2px);
+  }
+
+  60% {
+    font-weight: 700;
+    color: #fff;
+    filter: blur(0);
+  }
+
+  90% {
+    font-weight: 500;
+    color: #e0287d;
+    filter: blur(6px);
+  }
+}
+
+
+.glitch::before {
+  animation: paths 10s step-end infinite, opacity 5s step-end infinite,
+    font 8s step-end infinite, movement 10s step-end infinite;
+}
+
+.glitch::after {
+  animation: paths 10s step-end infinite, opacity 5s step-end infinite,
+    font 7s step-end infinite, movement 8s step-end infinite;
+}
+
+
+
+/* ====================================
+Animation keyframes
+==================================== */
+
+@keyframes scrollBackground {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: -200% 0, -300% 0, -400% 0; /* Scroll backgrounds at different speeds */
+  }
+}
+
+@keyframes borderanimation {
+  0% {
+    border-right: #fff 0px solid;
+    border-left: #fff 0px solid;
+  }
+  50% {
+    border-right: #fff 1px solid;
+    border-bottom: #fff 1px solid;
+  }
+  100% {
+    border-right: #fff 2px solid;
+    border-bottom: #fff 2px solid;
+  }
+}
+
+
+@keyframes neon {
+  0% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+  50% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+    0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+  }
+  100% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 472px;}
+}
+
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+
+  50% {
+      transform: translateY(-20px);
+  }
+
+  100% {
+      transform: translateY(0);  
+  }
+}
+
+.home .link1{
+  font-family: "Work Sans", sans-serif;
+  color: #fff;
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: absolute;
+  z-index: 10;
+  top:50px;
+  left:50px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #fff;
+  cursor: none;
+}
+
+.container {
+  width: 90%;
+  height: auto; /* Adjust to allow responsiveness */
+  margin: 0 auto;
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  body {
+    font-size: 14px;
+  }
+
+  .home {
+    width: auto;
+    height: 100vh;
+    position: sticky;
+    background-image: url('https://i.ibb.co/CsLDdxN/main.png');
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .definecontain {
+    position: fixed;
+    font-size: 12px; /* Adjusted font-size for small screens */
+    width: 100%; /* Full width */
+    text-align: center; /* Centers the content horizontally */
+    top: 50%; /* Vertically centers it */
+    left: 50%; /* Horizontally centers it */
+    transform: translate(-50%, -50%); /* Adjusts the exact center position */
+  }
+
+  .definecontain.expanded {
+    font-size: 12px; /* Slightly larger font-size for expanded on small screens */
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .definecontain {
+    font-size: 13px;
+    width: 100%; /* Full width */
+    text-align: center; /* Centers the content horizontally */
+    position: absolute; /* Ensures positioning relative to parent */
+    top: 50%; /* Vertically centers it */
+    left: 50%; /* Horizontally centers it */
+    transform: translate(-50%, -50%); /* Adjusts the exact center position */
+  }
+
+  .definecontain.expanded {
+    font-size: 14px; /* Slightly larger font-size for expanded on small screens */
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    width: 85%;
+  }
+
+  .definecontain {
+    font-size: 10px;
+    width: 100%; /* Full width */
+    text-align: center; /* Centers the content horizontally */
+    position: absolute; /* Ensures positioning relative to parent */
+    top: 50%; /* Vertically centers it */
+    left: 50%; /* Horizontally centers it */
+    transform: translate(-50%, -50%); /* Adjusts the exact center position */
+  }
+
+  .definecontain.expanded {
+    font-size: 14px; /* Increased font size for expanded state */
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body {
+    font-size: 17px;
+  }
+
+  .container {
+    width: 80%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    width: 75%;
+  }
+}
+    
+</style>
+
+  
+</body>
+
+</html>
