@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>About - Portfolio</title>
+  <title>Profile - Portfolio</title>
   <link rel="stylesheet" type="text/css" href="css/about.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -496,7 +496,7 @@ document.addEventListener("mouseout", () => {
   </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Chokokutai&family=Codystar:wght@300;400&family=Doto:wght@256&family=Inconsolata:wdth,wght@200,900&family=Londrina+Sketch&family=Major+Mono+Display&family=Monoton&family=Nova+Mono&family=Rubik+80s+Fade&family=Rubik+Glitch&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne+Mono&family=Tourney:ital,wght@0,100..900;1,100..900&family=Underdog&family=VT323&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Chokokutai&family=Codystar:wght@300;400&family=Doto:wght@256&family=Inconsolata:wdth,wght@200,900&family=Londrina+Sketch&family=Major+Mono+Display&family=Monoton&family=Nova+Mono&family=Rubik+80s+Fade&family=Rubik+Glitch&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne+Mono&family=Tourney:ital,wght@0,100..900;1,100..900&family=Underdog&family=VT323&display=swap');
 
 /* General Styles */
 body {
@@ -946,16 +946,39 @@ Device-Width
     position: sticky;
     top: 15%;
     left: 30%;
+    animation: none;
   }
   .terminal {
     display: block;
     position: sticky;
     margin-top: 150px;
     width: auto;
-    font-size: 9.5px;
+    font-size: 8px;
     padding: 5px;
     align-items: center;
+    animation: none;
   }
+
+  .tool-display-container {
+    animation: none;
+  }
+
+  .tool {
+    transition: none;
+  }
+
+  .tool img {
+    transition: none;
+  }
+
+  section {
+    animation: none;
+  }
+
+  footer {
+    animation: none;
+  }
+
   .projects {
     display: block;
   }
@@ -966,14 +989,15 @@ Device-Width
     width: 80%;
     height: fit-content;
     padding-top: 0px;
-    padding-left: 25x;
-    padding-right: 25px;
+    padding-left: -25x;
+    padding-right: 5px;
     padding-bottom: 5px;
     margin: 25px;
   }
  
   .first,.second, .third {
     margin-top: 0px;
+    text-decoration: none;
   }
   .open {
     width: 100%;
