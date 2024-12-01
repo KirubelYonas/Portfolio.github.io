@@ -193,7 +193,7 @@ defineContain.addEventListener('click', function() {
   </script>
 
   <style>
-    @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
+   @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Chokokutai&family=Codystar:wght@300;400&family=Doto:wght@256&family=Londrina+Sketch&family=Major+Mono+Display&family=Monoton&family=Rubik+80s+Fade&family=Rubik+Glitch&family=Syne+Mono&family=Tourney:ital,wght@0,100..900;1,100..900&family=Underdog&display=swap');
 
 * {
@@ -1299,8 +1299,48 @@ Animation keyframes
     width: 95%;
   }
 
+  .glitch::before {
+    animation: none;
+  }
+  
+  .glitch::after {
+    animation: none;
+  }
+
+  
+.layers {
+  position: relative;
+}
+
+.layers::before,
+.layers::after {
+  content: none;
+  position: absolute;
+  width: 110%;
+  z-index: -1;
+}
+
+.layers::before {
+  top: 10px;
+  left: 15px;
+  color: #000000;
+}
+
+.layers::after {
+  top: 10px;
+  left: -15px;
+  color: #000000;
+}
+
+
+  h1 {
+    animation: none;
+  }
+
   .software {
-    font-size: x-large
+    font-size: x-large;
+    animation: none;
+    color: #ffffff;
   }
 
   .copyright {
@@ -1316,10 +1356,16 @@ Animation keyframes
     left: 0;
     right: 0; /* Horizontally centers it */
     padding: 20px;
+    animation: none;
   }
 
   .more {
     font-size: 0.7rem;
+  }
+
+  .more:hover {
+    animation: none;
+    color: #ffffff;
   }
   
   .definecontain:hover {
@@ -1327,7 +1373,12 @@ Animation keyframes
   }
 
   .definecontain.expanded {
+    background-color: rgb(43, 43, 43);
+    --c1: rgb(43, 43, 43);
+    --c2: rgb(43, 43, 43);
+    --c3: rgb(43, 43, 43);
     font-size: 0.4rem; /* Increased font size for expanded state */
+    animation: none;
   }
 
   .definecontain.expanded .paragrapgh.first {
