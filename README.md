@@ -3,7 +3,7 @@
 ## About Me
 I am a passionate Web Developer with a strong interest in creating innovative solutions that make a real impact. I enjoy learning new technologies, solving challenging problems, and contributing to open-source projects.  
 
-My goal is to continuously grow as a professional while helping others through my work. I believe in clean, efficient, and maintainable code, and I love collaborating with teams that value creativity and innovation.
+I strive to grow as a developer while creating meaningful solutions. I enjoy tackling challenging problems and collaborating with teams that embrace creativity and innovation.
 
 ## Skills
 Here are some of the skills and technologies I have experience with:
