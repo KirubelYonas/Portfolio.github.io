@@ -344,16 +344,6 @@ a {
   color: #0A66C2;
 }
 
-.telegram {
-  width: fit-content;
-  padding: 10px;
-  color: #fff;
-}
-
-.telegram:hover {
-  color: #27A7E7;
-}
-
 .discord {
   width: fit-content;
   padding: 10px;
