@@ -6,84 +6,10 @@
   padding: 0;
 }
 
-/* Global scrollbar styles for webkit-based browsers */
-::-webkit-scrollbar {
-  width: 12px;  /* Vertical scrollbar width */
-  height: 12px; /* Horizontal scrollbar height */
-}
-
-::-webkit-scrollbar-track {
-  background: #000; /* Dark track color (black) */
-}
-
-::-webkit-scrollbar-thumb {
-  background: #333; /* Darker thumb color */
-  border-radius: 10px; /* Rounded corners for thumb */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Slightly lighter thumb on hover */
-}
-
-::-webkit-scrollbar-corner {
-  background: #000; /* Bottom corner where the scrollbars meet */
-}
-
-/* Firefox */
-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-scrollbar-track {
-  background: #333;
-  border-radius: 10px;
-}
-
-scrollbar-thumb {
-  background: #262d31;
-  border-radius: 10px;
-}
-
-scrollbar-thumb:hover {
-  background: #27292a;
-}
-
-/* Applying the styles to the .definecontain element specifically */
-.definecontain::-webkit-scrollbar {
-  width: 12px;
-}
-
-.definecontain::-webkit-scrollbar-track {
-  background: #2e2e2e;
-}
-
-.definecontain::-webkit-scrollbar-thumb {
-  background: #434b4e;
-}
-
-.definecontain::-webkit-scrollbar-thumb:hover {
-  background: #2c3032;
-}
-
-/* Optional - Firefox specific styles (use scrollbar-width and scrollbar-color) */
-.definecontain {
-  scrollbar-width: thin; /* Firefox specific */
-  scrollbar-color: #080808 #2e2e2e; /* Thumb and track colors */
-}
-
-/* Add smooth transition for the scrollbar */
-::-webkit-scrollbar-thumb {
-  transition: background 0.3s ease-in-out; /* Smooth transition for thumb */
-}
-
 .cursor-dot {
   width: 15px;
   height: 15px;
-
-  
   color: transparent;
-  display: none;
 }
 .cursor-outline {
   width: 22px;
@@ -243,7 +169,7 @@ h1 {
 }
 
 
-  /* Your original CSS */
+ 
   .definecontain {
     position: fixed;
     right: 5rem;
@@ -454,78 +380,6 @@ a {
   --shadow-color-light: rgb(187, 187, 187);
 }
 
-/* ====================================
-Loader
-==================================== */
-/* Loader wrapper to center the loader and cover the entire page */
-.loader-wrapper { /* Added for full-page black background and centering */
-  position: fixed; /* Keeps the loader in place while scrolling */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0); /* Black background with slight transparency */
-  display: flex; /* Flexbox to align items centrally */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  z-index: 9999; /* Ensures it's above all other elements */
-}
-
-.loader {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 6rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-.loader:before,
-.loader:after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  animation: pulsOut 1.8s ease-in-out infinite;
-  filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
-}
-.loader:before {
-  width: 100%;
-  padding-bottom: 100%;
-  box-shadow: inset 0 0 0 1rem #fff;
-  animation-name: pulsIn;
-}
-.loader:after {
-  width: calc(100% - 2rem);
-  padding-bottom: calc(100% - 2rem);
-  box-shadow: 0 0 0 0 #fff;
-}
-
-@keyframes pulsIn {
-  0% {
-    box-shadow: inset 0 0 0 1rem #fff;
-    opacity: 1;
-  }
-  50%, 100% {
-    box-shadow: inset 0 0 0 0 #fff;
-    opacity: 0;
-  }
-}
-
-@keyframes pulsOut {
-  0%, 50% {
-    box-shadow: 0 0 0 0 #fff;
-    opacity: 0;
-  }
-  100% {
-    box-shadow: 0 0 0 1rem #fff;
-    opacity: 1;
-  }
-}
-    
-
-
-    
 /* ====================================
 Glitch 
 ==================================== */
